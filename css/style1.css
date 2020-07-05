@@ -12,6 +12,10 @@
     padding-right: 20px;
     border-left: 1px solid gray;
 }
+#bottom h3 {
+    font-size: 15px;
+    text-align: center;
+}
 body {
     margin:0;
 }
@@ -35,6 +39,7 @@ h1 {
     }
     #article{
         border-top: 1px solid gray;
+        border-left: none;
     }
     h1 {
         font-size: 30px;
