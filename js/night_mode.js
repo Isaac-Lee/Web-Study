@@ -1,15 +1,39 @@
-let night_btn = document.getElementById("night_btn");
-let day_btn = document.getElementById("day_btn");
+var night_mode_btn = document.getElementById("night_mode_btn");
+var body = document.querySelector('body');
+var a = document.querySelector('a');
+var ol = document.querySelector('ol');
 
-night_btn.addEventListener('click', night_mode);
-day_btn.addEventListener('click', day_mode)
+night_mode_btn.addEventListener('click', night_mode);
 
 function night_mode() {
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
+    var night_mode = night_mode_btn.value;
+    if (night_mode == 'on') {
+        night_mode_btn.value = 'off';
+        body.style.backgroundColor = 'white';
+        body.style.color = 'black';
+        make_a_blue();
+    } else {
+        night_mode_btn.value = 'on';
+        body.style.backgroundColor = 'black';
+        body.style.color = 'white';
+        make_a_powederblue();
+    }
 }
 
-function day_mode() {
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'black';
+function make_a_powederblue() {
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while (i < alist.length) {
+        alist[i].style.color = 'powderblue';
+        i++;
+    }   
+}
+
+function make_a_blue() {
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while (i < alist.length) {
+        alist[i].style.color = 'blue';
+        i++;
+    }   
 }
