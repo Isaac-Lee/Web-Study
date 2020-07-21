@@ -2,9 +2,26 @@ var night_mode_btn = document.getElementById("night_mode_btn");
 var body = document.querySelector('body');
 var a = document.querySelector('a');
 var ol = document.querySelector('ol');
+var alist = document.querySelectorAll('a');
 
 var Body = {
-    
+    setColor:function (color) {
+        body.style.color = color;
+    },
+    setBackgroundColor:function (color) {
+        body.style.backgroundColor = color;
+    },
+    setLinksColor:function (color) {
+        var i = 0;
+        while (i < alist.length) {
+        alist[i].style.color = color;
+        i++;
+        }
+    },
+    setNightmodeBtn:function (boolean) {
+        night_mode_btn.value = boolean;
+    }
+
 }
 
 night_mode_btn.addEventListener('click', night_mode);
@@ -12,15 +29,15 @@ night_mode_btn.addEventListener('click', night_mode);
 function night_mode() {
     var night_mode = night_mode_btn.value;
     if (night_mode == 'on') {
-        night_mode_btn.value = 'off';
-        body.style.backgroundColor = 'white';
-        body.style.color = 'black';
-        make_a_blue();
+        Body.setNightmodeBtn('off')
+        Body.setBackgroundColor('white');
+        Body.setColor('black');
+        Body.setLinksColor('blue')
     } else {
-        night_mode_btn.value = 'on';
-        body.style.backgroundColor = 'black';
-        body.style.color = 'white';
-        make_a_powederblue();
+        Body.setNightmodeBtn('on')
+        Body.setBackgroundColor('black');
+        Body.setColor('white');
+        Body.setLinksColor('powderblue')
     }
 }
 
