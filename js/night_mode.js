@@ -3,6 +3,10 @@ var body = document.querySelector('body');
 var a = document.querySelector('a');
 var ol = document.querySelector('ol');
 
+var Body = {
+    
+}
+
 night_mode_btn.addEventListener('click', night_mode);
 
 function night_mode() {
