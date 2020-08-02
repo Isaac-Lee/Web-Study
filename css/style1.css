@@ -7,11 +7,7 @@
     padding-top: 15px;
     margin:0;
 }
-#article{
-    padding-left: 30px;
-    padding-right: 20px;
-    border-left: 1px solid gray;
-}
+
 #bottom h3 {
     font-size: 15px;
     text-align: center;
@@ -21,6 +17,11 @@ body {
 }
 a {
     text-decoration: none;
+}
+article{
+    padding-left: 30px;
+    padding-right: 20px;
+    border-left: 1px solid gray;
 }
 h1 {
     font-size: 45px;

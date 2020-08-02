@@ -7,21 +7,45 @@
     <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
-    <h1><a href = "index.html" style = "text-decoration: underline;">키보드</a></h1>
+    <h1><a onclick="
+        fetch('kbd').then(function(response) {
+            response.text().then(function(text){
+                document.querySelector('article').innerHTML = text;
+            })
+        })
+        ">키보드</a></h1>
     <div id="grid">
         <div id='index'>
             <ol>
-                <li><a href = "mechkey.html"> <span class="index">기계식 키보드</span></a></li>
-                <li><a href = "membkey.html"> <span class="index">멤브레인 키보드</span></a></li>
-                <li><a href = "toprekey.html"> <span class="index">무접점 키보드</span></a></li>
+                <li><a onclick="
+                    fetch('mechkey').then(function(response) {
+                        response.text().then(function(text){
+                            document.querySelector('article').innerHTML = text;
+                        })
+                    })
+                    "> <span class="index">기계식 키보드</span></a></li>
+                <li><a onclick="
+                    fetch('membkey').then(function(response) {
+                        response.text().then(function(text){
+                            document.querySelector('article').innerHTML = text;
+                        })
+                    })
+                    "> <span class="index">멤브레인 키보드</span></a></li>
+                <li><a onclick="
+                    fetch('toprekey').then(function(response) {
+                        response.text().then(function(text){
+                            document.querySelector('article').innerHTML = text;
+                        })
+                    })
+                    "> <span class="index">무접점 키보드</span></a></li>
             </ol>
         </div>
-        <div id="article">
+        <article>
             <h2>키보드</h2>
             <p>
                 컴퓨터에서 문자를 입력하는 도구로서 원래는 피아노나 오르간 같은 종류의 건반 악기을 부르던 말이였는데, 이것이 타자기의 문자 입력장치와 비슷하다고 해서 타자기의 (문)자판을 키보드라 부르게 되었고, 이후 컴퓨터가 타자기를 대체하면서 키보드도 컴퓨터의 입력장치를 뜻하게 된다. 한자로 옮긴 자판(字板) 역시 같은 뜻으로 쓰인다.
             </p>
-        </div>
+        </article>
     </div>
     <div id = "bottom">
         Night Mode: 
