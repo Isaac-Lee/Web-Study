@@ -26,6 +26,14 @@ var Body = {
 
 night_mode_btn.addEventListener('click', night_mode);
 
+function fetchPage(name) {
+    fetch(name).then(function(response) {
+        response.text().then(function(text){
+            document.querySelector('article').innerHTML = text;
+        })
+    })
+}
+
 function night_mode() {
     var night_mode = night_mode_btn.value;
     if (night_mode == 'on') {

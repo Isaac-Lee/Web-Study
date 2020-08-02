@@ -17,27 +17,9 @@
     <div id="grid">
         <div id='index'>
             <ol>
-                <li><a onclick="
-                    fetch('mechkey').then(function(response) {
-                        response.text().then(function(text){
-                            document.querySelector('article').innerHTML = text;
-                        })
-                    })
-                    "> <span class="index">기계식 키보드</span></a></li>
-                <li><a onclick="
-                    fetch('membkey').then(function(response) {
-                        response.text().then(function(text){
-                            document.querySelector('article').innerHTML = text;
-                        })
-                    })
-                    "> <span class="index">멤브레인 키보드</span></a></li>
-                <li><a onclick="
-                    fetch('toprekey').then(function(response) {
-                        response.text().then(function(text){
-                            document.querySelector('article').innerHTML = text;
-                        })
-                    })
-                    "> <span class="index">무접점 키보드</span></a></li>
+                <li><a onclick="fetchPage('mechkey')"> <span class="index">기계식 키보드</span></a></li>
+                <li><a onclick="fetchPage('membkey')"> <span class="index">멤브레인 키보드</span></a></li>
+                <li><a onclick="fetchPage('toprekey')"> <span class="index">무접점 키보드</span></a></li>
             </ol>
         </div>
         <article>
@@ -52,6 +34,6 @@
         <input type="button" id = "night_mode_btn" value="off">
         <h3>Made by Isaac Lee</h3>
     </div>
-    <script type="text/javascript" src="js/night_mode.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
 </body>
 </html>
